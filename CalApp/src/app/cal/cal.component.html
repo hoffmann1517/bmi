@@ -1,0 +1,31 @@
+<h1>
+    Body mass index
+</h1>
+<input [(ngModel)]='age' type="number" name="age" placeholder="Enter age">
+<input [(ngModel)]='weight' type="number" name="weight" placeholder="Enter weight in kg">
+<input [(ngModel)]='height' type="number" name="height" placeholder="Enter height in meters">
+<br>
+<br>
+<button (click)='bmi()'>
+     calculation body mass index
+</button>
+<br>
+<br>
+<h2>
+    {{BMI}}
+</h2>
+<button (click)='story()'>
+    show history of entered values
+</button>
+
+
+    
+   <div *ngIf="showHistory"> 
+        <p *ngFor="let data of history">
+                <b>Age:</b> {{data.age}} <b>Weight</b>: {{data.weight}} <b>Height:</b> {{data.height}} <b>BMI:</b> {{data.bmi}}
+        </p>
+   </div>
+<br>
+<br>
+
+
